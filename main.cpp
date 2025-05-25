@@ -1,5 +1,6 @@
-#include <SFML/Graphics.hpp>
 #include "Foundation/Renderer/renderer.h"
+#include <SFML/Graphics.hpp>
+
 
 int main() {
 
@@ -8,7 +9,7 @@ int main() {
     while (renderer.isOpen()) {
         renderer.pollEvents();
         renderer.clear();
-        // renderer.draw(someDrawable);
+        // renderer.draw("assets/test.png");
         renderer.display();
     }
     return 0;

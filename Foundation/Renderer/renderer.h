@@ -12,7 +12,8 @@ class Renderer {
     void clear(const sf::Color& color = sf::Color::Black);
 
     // Draws an entity's asset
-    void draw(const sf::Drawable& drawable);
+    // void draw(const sf::Drawable& drawable);
+    void draw(const std::string& imagePath);
 
     // I don't really know yet (CoPilot)
     void display();
@@ -24,4 +25,5 @@ class Renderer {
 
     private:
     sf::RenderWindow window;
+    sf::Texture texture;
 };

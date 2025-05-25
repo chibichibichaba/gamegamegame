@@ -1,35 +1,35 @@
+#include "Foundation/Renderer/renderer.h"
 #include <SFML/Graphics.hpp>
 
-class Renderer {
-public:
-    Renderer(unsigned int width, unsigned int height, const std::string& title)
-        : window(sf::VideoMode(width, height), title) {}
+Renderer::Renderer(unsigned int width, unsigned int height, const std::string& title)
+    : window(sf::VideoMode(width, height), title) {}
 
-    void clear(const sf::Color& color = sf::Color::Black) {
-        window.clear(color);
+void Renderer::clear(const sf::Color& color) {
+    window.clear(color);
+}
+
+void Renderer::draw(const std::string& imagePath) {
+    if (!texture.loadFromFile(imagePath)){
+        return;
     }
 
-    void draw(const sf::Drawable& drawable) {
-        window.draw(drawable);
-    }
+    sf::Sprite sprite(texture);
+    window.draw(sprite);
+}
 
-    void display() {
-        window.display();
-    }
+void Renderer::display() {
+    window.display();
+}
 
-    bool isOpen() const {
-        return window.isOpen();
-    }
+bool Renderer::isOpen() const {
+    return window.isOpen();
+}
 
-    void pollEvents() {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
+void Renderer::pollEvents() {
+    sf::Event event;
+    while (window.pollEvent(event)) {
+        if (event.type == sf::Event::Closed)
+            window.close();
     }
-
-private:
-    sf::RenderWindow window;
-};
+}
 
