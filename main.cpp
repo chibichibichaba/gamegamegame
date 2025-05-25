@@ -28,20 +28,8 @@ int main() {
                 window.close();
         }
 
-        // Movement logic
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-            player.move(-moveSpeed, 0);
-        }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-            player.move(moveSpeed, 0);
-        }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            player.move(0, -moveSpeed);
-        }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-            player.move(0, moveSpeed);
-        }
-
+        
+        
         window.clear(sf::Color::Black);
         window.draw(player);
         window.display();
