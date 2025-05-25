@@ -1,6 +1,9 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
+
+    // This is a test comment
+
     sf::RenderWindow window(sf::VideoMode(800, 600), "GameGame - Player Movement");
     window.setFramerateLimit(240);
 
