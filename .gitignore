@@ -1,0 +1,29 @@
+# ---- Build files ----
+/build/
+/CMakeFiles/
+/CMakeCache.txt
+/Makefile
+/*.cmake
+/*.vcxproj
+/*.sln
+/*.exe
+
+# ---- IDE & config ----
+.vscode/
+*.code-workspace
+
+# ---- Object & temp files ----
+*.obj
+*.o
+*.pdb
+*.ilk
+*.log
+
+# ---- SFML runtime ----
+sfml-graphics-2.dll
+sfml-window-2.dll
+sfml-system-2.dll
+
+# ---- OS crap ----
+.DS_Store
+Thumbs.db

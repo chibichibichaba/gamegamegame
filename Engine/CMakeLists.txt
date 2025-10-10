@@ -1,0 +1,2 @@
+file(GLOB ENGINE_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+add_library(Engine STATIC ${ENGINE_SOURCES})
