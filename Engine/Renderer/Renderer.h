@@ -7,13 +7,14 @@ class Renderer{
     
 
     public:
-       
-        void openWindow(int height, int width, std::string windowname = "Hello world");
+        void initWindow();
+        void openWindow(int height, int width, std::string windowname);
         void closeWindow();
 
 
  
 
 };
+
 
 
