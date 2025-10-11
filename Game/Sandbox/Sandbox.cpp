@@ -5,10 +5,7 @@ int main(){
 
     Renderer menu;
     
-
-    while(true){
-        menu.openWindow(200,300, "name");
-    };
-
+    menu.openWindow(720, 720, "Sandbox");
+    menu.updateWindow();
     return 0;
 }
