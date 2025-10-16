@@ -16,12 +16,7 @@ void Renderer::openWindow(int width, int height, std::string windowname = "Hello
     window.create(sf::VideoMode(width, height), windowname);
 
 };
-
-void draw(){ 
-
-};
-
-
+ 
 
 void Renderer::drawshape(int height, int width, int posx, int posy){
     sf::RectangleShape test;
@@ -32,19 +27,44 @@ void Renderer::drawshape(int height, int width, int posx, int posy){
     window.draw(test);
 };
 
-void Renderer::updateWindow(){
-        while(true){
+
+void Renderer::test(std::string file){
+    sf::Sprite sprite;
+    sf::Texture texture;
+    texture.loadFromFile(file);
+    sprite.setTexture(texture);
+    sprite.setTextureRect(sf::IntRect(10, 10, 50, 30));
+    sprite.setColor(sf::Color(255, 255, 255, 200));
+    sprite.setPosition(100, 25);
+    window.draw(sprite);
+};
+
+
+void Renderer::updateWindow(std::vector<std::string> files){
+    int o = 1;
+    while(o == 1){
+        
         sf::Event event;
 
         while(window.pollEvent(event)){
             if (exit()){
                 window.close();
+                o = 0;
             };
 
-    };
+        };
 
         window.clear();
-        Renderer::drawshape(300,400,200,200);
+
+        for (int i = 0; i < files.size(); i++) {
+            sf::Sprite sprite;
+            sf::Texture texture;
+            texture.loadFromFile(files[i]);
+            sprite.setTexture(texture);
+            sprite.setPosition(100, 25);
+            window.draw(sprite);
+        }
+        
         window.display();
     };
-}
+};
