@@ -2,21 +2,24 @@
 #include <iostream> //for debugging
 
 
+
+
 Entity EntityManager::create(const std::string& name){
 
-    std::unordered_map<std::string, uint32_t> entity;
-    
-    if(entity.size() == 0){
-        uint32_t EntityID = 0;
-        entity.insert({name, EntityID});
-    }
+    Entity e;
+    e.entityName = name;
+    e.entityID = NextID++;
 
-    else {
-        uint32_t EntityID = entity.size();
-        entity.insert({name, EntityID});
-    }
+    entities[name] = e.entityID;
+    
+    return e;
 };
 
 
 
-void EntityManager::kill(){};
+void EntityManager::kill(const std::string& name){
+
+    entities.erase(name);
+    
+
+};

@@ -4,8 +4,8 @@
 #include <unordered_map>
 
 struct Entity{
-    uint32_t EnityID;
-    std::string name;
+    uint32_t entityID;
+    std::string entityName;
 };
 
 
@@ -14,7 +14,13 @@ class EntityManager{
     public:
 
     Entity create(const std::string& name) ;
-    void kill();
+    void kill(const std::string& name);
+
+
+    private:
+    std::unordered_map<std::string, uint32_t> entities;
+    uint32_t NextID = 0;
+
 
 };
 
