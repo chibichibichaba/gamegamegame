@@ -2,13 +2,18 @@
 #include <string>
 #include <cinttypes>
 
-class ECS {
+struct Entity{
 
-    public:
-
-    //Entity 
-
-
-
-    private:
+    
 };
+
+
+class EntityManager{
+
+};
+
+
+class ComponentManager{
+
+};
+

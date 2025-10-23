@@ -15,5 +15,5 @@ int main(){
     
 
     menu.updateWindow(files);
-    return 0;
+
 }
