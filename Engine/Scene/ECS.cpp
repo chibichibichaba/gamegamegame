@@ -18,4 +18,5 @@ Entity EntityManager::create(const std::string& name){
 };
 
 
+
 void EntityManager::kill(){};
