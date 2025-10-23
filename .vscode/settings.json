@@ -44,6 +44,9 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp",
-        "*.gitignore": "cpp"
+        "*.gitignore": "cpp",
+        "cinttypes": "cpp",
+        "iostream": "cpp",
+        "istream": "cpp"
     }
 }
