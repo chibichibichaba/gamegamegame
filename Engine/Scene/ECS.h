@@ -45,7 +45,13 @@ class ComponentManager{
         return components.at(e);
     };
 
- 
+    bool has(EntityID e) const {
+        return components.find(e) != components.end();
+    }
+
+    const std::unordered_map<EntityID, T>& all() const {
+        return components;
+    }
     private:
         std::unordered_map<EntityID, T> components;
         

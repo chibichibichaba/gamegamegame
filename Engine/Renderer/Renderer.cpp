@@ -39,6 +39,10 @@ void Renderer::test(std::string file){
     window.draw(sprite);
 };
 
+void Renderer::draw(const sf::Drawable& drawable) {
+    window.draw(drawable);
+};
+
 
 void Renderer::updateWindow(std::vector<std::string> files){
     int o = 1;

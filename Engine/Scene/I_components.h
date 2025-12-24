@@ -4,7 +4,6 @@
 
 struct SpriteComponent {
     sf::Sprite sprite; 
-//  sprite.setTexture(TextureComponent& texture);
 
 };
 
@@ -17,4 +16,5 @@ struct PositionComponent{
     float y; 
     float z;
 };
+
 
