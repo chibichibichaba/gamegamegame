@@ -21,5 +21,4 @@ void EntityManager::kill(const std::string& name){
 
     entities.erase(name);
     
-
 };
