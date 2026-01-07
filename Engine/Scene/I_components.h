@@ -4,7 +4,6 @@
 
 struct SpriteComponent {
     sf::Sprite sprite; 
-
 };
 
 struct TextureComponent{
@@ -18,3 +17,6 @@ struct PositionComponent{
 };
 
 
+struct IsPlayableComponent{
+    bool playable;
+};

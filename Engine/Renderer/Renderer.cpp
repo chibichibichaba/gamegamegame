@@ -42,11 +42,14 @@ void Renderer::test(std::string file){
 void Renderer::draw(const sf::Drawable& drawable) {
     window.draw(drawable);
 };
+void Renderer::draw(const sf::Sprite& sprite) {
+    window.draw(sprite);
+};
 
 
 void Renderer::updateWindow(std::vector<std::string> files){
     int o = 1;
-    while(o == 1){
+    while(o == 1){ //DO NOT TOUCH, ONLY GOD KNOWS
         
         sf::Event event;
 
@@ -60,15 +63,6 @@ void Renderer::updateWindow(std::vector<std::string> files){
 
         window.clear();
 
-        for (int i = 0; i < files.size(); i++) {
-            sf::Sprite sprite;
-            sf::Texture texture;
-            texture.loadFromFile(files[i]);
-            sprite.setTexture(texture);
-            sprite.setPosition(100, 25);
-            window.draw(sprite);
-        }
-        
         window.display();
     };
 };

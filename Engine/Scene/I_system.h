@@ -18,14 +18,20 @@ class SpriteSystem {
         ComponentManager<PositionComponent>& positionManager){
 
 
-       for (const auto& [entity, sprite] : spriteManager.all()) {
+       for (const auto& [entity, _] : spriteManager.all()) {
         if (!positionManager.has(entity)) continue;
 
+        auto& spriteComp = spriteManager.get(entity);
         auto& pos = positionManager.get(entity);
-        sprite.sprite.setPosition(pos.x, pos.y);
-        renderer.draw(sprite.sprite);
+
+        spriteComp.sprite.setPosition(pos.x, pos.y);
     }
     
-
+ 
 }
 };
+
+class PhysicsSystem{};
+
+class InputSystem{};
+
